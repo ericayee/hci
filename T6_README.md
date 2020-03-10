@@ -1,7 +1,7 @@
 # IS 4300 Team Project
 
 ## T6: Team Assignment #6 – Computer Prototyping
-Prototype: [ericayee.com/hci-t6/](ericayee.com/hci-t6/)
+Prototype: [ericayee.com/hci-t6/](https://ericayee.com/hci-t6/)
 
 #### About the application
 Finding Your Way is a redesign of Northeastern’s Degree Audit, showing what courses a student has completed and must complete to finish their degree. A user opens the web application via a link from the myNortheastern portal.
@@ -13,4 +13,4 @@ Finding Your Way is a redesign of Northeastern’s Degree Audit, showing what co
 
 The prototype should be immediately accessible without any installation process [here](https://ericayee.com/hci-t6/).
 
-_Back to [project home page](https://github.com/ericayee/hci-t6/)_
+_Back to [project home page](https://github.com/ericayee/hci/)_
