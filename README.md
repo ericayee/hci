@@ -18,4 +18,4 @@ joseph.pr@husky.neu.edu
 * [T3 Design Sketches](assignments/T3-JosephMorelYee.pdf)
 * [T4 Paper Prototyping Part 1](assignments/T4-JosephMorelYee.pdf)
 * [T5 Paper Prototyping Part 2](assignments/T5-JosephMorelYee.pdf)
-* T6 Computer Prototyping | [README](T6-README.me) | [prototype](https://ericayee.com/hci-t6/)
+* T6 Computer Prototyping | [README](T6_README.md) | [prototype](https://ericayee.com/hci-t6/)
