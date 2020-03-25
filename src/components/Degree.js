@@ -23,8 +23,62 @@ class Degree extends Component {
     };
   }
 
+  componentDidMount() {
+    this.hydrateStateWithLocalStorage();
+
+    // add event listener to save state to localStorage
+    // when user leaves/refreshes page
+    window.addEventListener(
+      "beforeunload",
+      this.saveStateToLocalStorage.bind(this)
+    );
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener(
+      "beforeunload",
+      this.saveStateToLocalStorage.bind(this)
+    );
+
+    // saves if component has chance to unmount
+    this.saveStateToLocalStorage();
+  }
+
+  hydrateStateWithLocalStorage() {
+    if (!this.state.degreeName) {
+      // for all items in state
+      for (let key in this.state) {
+        // if key exists in localStorage
+        if (localStorage.hasOwnProperty(key)) {
+          // get key's value from localStorage
+          let value = localStorage.getItem(key);
+
+          // parse localStorage string and setState
+          try {
+            value = JSON.parse(value);
+            this.setState({
+              [key]: value
+            });
+          } catch (e) {
+            // handle empty string
+            this.setState({
+              [key]: value
+            });
+          }
+        }
+      }
+    }
+  }
+
+  saveStateToLocalStorage() {
+    // for every item in React state
+    for (let key in this.state) {
+      // save to localStorage
+      localStorage.setItem(key, JSON.stringify(this.state[key]));
+    }
+  }
+
   render() {
-    console.log(this.props.location.degreeName);
     return (
       <div className="degree-wrapper">
       <DegreeSidebar/>

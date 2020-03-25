@@ -2,6 +2,14 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 
 class Landing extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      expandedGPA : false,
+      degreeName : 'B.S. Computer Science/Media Art'
+    };
+  }
+
   render() {
     return (
       <div className="landing-wrapper">
@@ -9,12 +17,12 @@ class Landing extends Component {
         <div>
           <Link to={{
             pathname: '/degree',
-            degreeName: 'B.S. Computer Science/Media Art'
+            degreeName: this.state.degreeName
           }}>
-            <button class="home-btn">View current degree progress</button>
+            <button className="home-btn">View current degree progress</button>
           </Link>
           <Link to="/explore">
-            <button class="home-btn">Explore degree options</button>
+            <button className="home-btn">Explore degree options</button>
           </Link>
         </div>
       </div>
