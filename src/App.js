@@ -9,10 +9,11 @@ import Error from './components/Error';
 class App extends Component {
   render() {
     return (
-       <Router>
+       <Router basename='/hci'>
         <div className="App">
           <Switch>
            <Route path="/" component={Landing} exact/>
+           <Route path="/home" component={Landing} exact/>
            <Route path="/degree" component={Degree}/>
            <Route path="/explore" component={Explore}/>
            <Route component={Error}/>
