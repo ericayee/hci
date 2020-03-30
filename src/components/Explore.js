@@ -48,9 +48,9 @@ class Explore extends Component {
     return (
       <div className="explore-wrapper">
         <Link to='/'>
-		      <button className="home-btn">Home</button>
+		      <button className="home-btn" id="explore-home-btn">Home</button>
 		    </Link>
-
+        <div className="explore-content-wrapper">
         <h2>Explore other degree options</h2>
 
         <div className="select-wrapper">
@@ -80,7 +80,7 @@ class Explore extends Component {
               />
           }
         </div>
-
+        </div>
       </div>
     );
   }
