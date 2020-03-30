@@ -51,35 +51,35 @@ class Explore extends Component {
 		      <button className="home-btn" id="explore-home-btn">Home</button>
 		    </Link>
         <div className="explore-content-wrapper">
-        <h2>Explore other degree options</h2>
+          <h2>Explore other degree options</h2>
+          <p class="explore-desc">This tool can be used to check requirements for other degree options if you're thinking about changing your major. Exploring these options generates hypothetical output. Any official change of your degree or catalog year must be done through your academic advisor.</p>
+          <div className="select-wrapper">
+            <h4>Catalog Year
+              <span><img data-tip={catalogYearTooltipText} src={info} className="info-icon" alt="info icon" /></span>
+              <ReactTooltip place="top" type="dark" effect="solid" multiline={true}/>
+            </h4>
+            <Select
+              className="select-menu"
+              options={yearOptions}
+              onChange={this.handleYear.bind(this)}
+              defaultValue={{ label: '2017', value: '2017' }}
+            />
+            <h4>College</h4>
+            <Select
+              className="select-menu"
+              options={collegeOptions}
+              onChange={this.handleCollege.bind(this)}
+            />
+          </div>
 
-        <div className="select-wrapper">
-          <h4>Catalog Year
-            <span><img data-tip={catalogYearTooltipText} src={info} className="info-icon" alt="info icon" /></span>
-            <ReactTooltip place="top" type="dark" effect="solid" multiline={true}/>
-          </h4>
-          <Select
-            className="select-menu"
-            options={yearOptions}
-            onChange={this.handleYear.bind(this)}
-            defaultValue={{ label: '2017', value: '2017' }}
-          />
-          <h4>College</h4>
-          <Select
-            className="select-menu"
-            options={collegeOptions}
-            onChange={this.handleCollege.bind(this)}
-          />
-        </div>
-
-        <div className="degree-list-wrapper">
-          {
-            this.state.year && this.state.college &&
-              <DegreeList
-                data={currentList}
-              />
-          }
-        </div>
+          <div className="degree-list-wrapper">
+            {
+              this.state.year && this.state.college &&
+                <DegreeList
+                  data={currentList}
+                />
+            }
+          </div>
         </div>
       </div>
     );

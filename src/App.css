@@ -24,6 +24,31 @@
   margin: 36px 0 0 26px;
 }
 
+.explore-desc {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.explore-btn {
+  border: 2px solid black;
+  background-color: white;
+  color: black;
+  padding: 7px 14px;
+  font-size: 16px;
+  cursor: pointer;
+  margin:10px;
+}
+
+.explore-btn:hover {
+  background-color: orange;
+  color: white;
+}
+
+.explore-btn a {
+  text-decoration: none;
+  color: black;
+}
+
 .select-wrapper {
   max-width: 500px;
   margin: 50px auto;
@@ -59,13 +84,7 @@
   cursor: pointer;
 }
 
-.underline-text {
-  text-decoration: underline;
-}
-
 .degree-listing-view {
-  text-transform: uppercase;
-  text-decoration: underline;
   padding: .5em;
 }
 
