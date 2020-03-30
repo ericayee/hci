@@ -38,5 +38,13 @@ export const degrees = [
     degree: 'B.A. Computer Science',
     description: "The Bachelor of Arts in Computer Science offers a similar curriculum to the BS, with slightly fewer CS requirements to allow students to study a foreign language and have a wider choice of electives.",
     link: "http://catalog.northeastern.edu/undergraduate/computer-information-science/computer-science/bacs/"
+  },
+  {
+    value: 'bs-compsci',
+    college: 'khoury',
+    program: 'Computer Science',
+    degree: 'B.S. Computer Science/Media Art',
+    description: "The computer science and media arts combined major is ideal for creative students who love technology. Students will acquire a solid foundation in both fields through curriculum that spans photography, animation, video, database design, computer graphics, and human-computer interaction.",
+    link: "http://catalog.northeastern.edu/undergraduate/computer-information-science/computer-information-science-combined-majors/computer-science-media-arts-bs/"
   }
 ];

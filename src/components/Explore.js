@@ -6,7 +6,7 @@ import ReactTooltip from 'react-tooltip';
 import { degrees } from  '../data/DegreeData';
 import info from '../media/info-icon.svg';
 
-const catalogYearTooltipText = "The Catalog Year is the year a student entered the university.";
+const catalogYearTooltipText = "The Catalog Year is by default the year a student entered the university.<br />Because major requirements may change from year to year,<br /> students may work with their advisor to change their Catalog Year if desired.";
 
 const yearOptions = [
   { value: '2017', label: '2017' },
@@ -16,9 +16,9 @@ const yearOptions = [
 ];
 
 const collegeOptions = [
-  { value: 'camd', label: 'College of Arts, Media and Design' },
-  { value: 'coe', label: 'College of Engineering' },
-  { value: 'khoury', label: 'Khoury College of Computer Sciences' }
+  { value: 'camd', label: 'College of Arts, Media and Design (CAMD)' },
+  { value: 'coe', label: 'College of Engineering (COE)' },
+  { value: 'khoury', label: 'Khoury College of Computer Sciences (KCCS)' }
 ];
 
 let currentList = [];
@@ -27,7 +27,7 @@ class Explore extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      year: null,
+      year: '2017', // TODO pull from student JSON?
       college: null
     };
   }
@@ -56,12 +56,13 @@ class Explore extends Component {
         <div className="select-wrapper">
           <h4>Catalog Year
             <span><img data-tip={catalogYearTooltipText} src={info} className="info-icon" alt="info icon" /></span>
-            <ReactTooltip place="top" type="dark" effect="solid"/>
+            <ReactTooltip place="top" type="dark" effect="solid" multiline={true}/>
           </h4>
           <Select
             className="select-menu"
             options={yearOptions}
             onChange={this.handleYear.bind(this)}
+            defaultValue={{ label: '2017', value: '2017' }}
           />
           <h4>College</h4>
           <Select
