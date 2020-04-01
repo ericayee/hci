@@ -14,6 +14,7 @@ class Landing extends Component {
 
   render() {
     return (
+
       <div className="landing-wrapper">
 
       <div className="welcomeName">
@@ -21,7 +22,7 @@ class Landing extends Component {
         </div>
         <div className= "explanationParagraph">
         <p>Welcome to <i>Finding Your Way. </i></p>
-        <p>You are currently working towards a  <i> {this.state.degreeName} </i> </p>
+        <p>You are currently working towards a  <i> {this.state.degreeName} </i>  degree</p>
         <p> You can choose to check out your progress towards completing this degree, or choose to explore other potential degree options. </p>
         </div>
 

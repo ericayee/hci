@@ -22,6 +22,7 @@ class Degree extends Component {
     super(props);
     this.state = {
       expandedGPA : false,
+      expandedProgress : false,
       degreeName : this.props.location.degreeName
     };
   }
@@ -111,6 +112,51 @@ class Degree extends Component {
           <ReactTooltip place="top" type="dark" effect="solid"/>
       </p>
 
+      <button type="button" class="MultipleGPA" onClick={() => this.setState({
+        expandedProgress: !this.state.expandedProgress
+      })}>
+        <p> <b> Credits in Progress: </b> 17
+        <span><img src={this.state.expandedProgress ? arrowUp : arrowDown} className="dropDownGPA" alt="dropDownGPA" /></span>
+        </p>
+
+      </button>
+      {this.state.expandedProgress &&
+        <div className="expandedGPASection">
+        <p> These are courses a student is currently registered taking. </p>
+        <p>They are not currently included in Universiy Credits. </p>
+        <div className = "requirementTable" >
+        <table>
+        <tr>
+          <th>Course Number</th>
+          <th>Title</th>
+          <th>Credits</th>
+
+        </tr>
+        <tr>
+          <td>CS 2510</td>
+          <td>Fundamentals of Computer Science 2 </td>
+          <td>5</td>
+        </tr>
+
+        <tr>
+          <td>ARTD 2370</td>
+          <td>Animation Basics	 </td>
+          <td> 4 </td>
+        </tr>
+
+        <tr>
+          <td>ARTD 2380</td>
+          <td> Video Basics	 </td>
+          <td>4</td>
+        </tr>
+        </table>
+        </div>
+
+
+
+        </div>}
+
+
       <p> <b> Completed Requirements:</b> 4/11
           <span><img data-tip={CompletedRequirementsTooltipText} src={info} className="info-icon" alt="info icon" /></span>
           <ReactTooltip place="top" type="dark" effect="solid" multiline={true}/>
@@ -126,7 +172,7 @@ class Degree extends Component {
       </button>
       {this.state.expandedGPA &&
         <div className="expandedGPASection">
-        <p> A minimum total GPA of 2.0 is required to graduate. </p>
+      <p> A minimum total GPA of 2.0 is required to graduate. </p>
         <p> A minimum degree GPA of 2.3 is required to graduate. </p>
 
 
@@ -216,7 +262,7 @@ class Degree extends Component {
         <td>CS 2510</td>
         <td>Fundamentals of Computer Science 2 </td>
         <td> In Progress </td>
-        <td> </td>
+        <td> - </td>
         <td>5</td>
       </tr>
 
