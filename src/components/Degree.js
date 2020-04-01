@@ -7,11 +7,12 @@ import arrowUp from '../media/arrow-up.svg';
 import arrowDown from '../media/arrow-down.svg';
 import DegreeSidebar from "./DegreeSidebar";
 
+const TotalCreditsTooltipText = "This includes credits from ";
 
 const CompletedRequirementsTooltipText = "Each degree is broken down into a series of requirements, including both major requirements and university-wide requirements";
 const MajorGPATooltipText = "Degree GPA only includes courses that fulfill the requirements of a student's major";
 const UniversityDegreeTooltipText = "University GPA includes only courses taken at Northeastern";
-const SemesterHoursTooltipText = "Only courses taken at Northeastern count towards Semester Hours";
+const SemesterHoursTooltipText = "Students must earn a minimum of 64 Northeastern University semester hours in order to receive a bachelor's degree. ";
 
 
 class Degree extends Component {
@@ -91,15 +92,23 @@ class Degree extends Component {
 
       <p> <b>Degree:</b> {this.state.degreeName}</p>
       {/*<p> <b>Degree:</b> Computer Science/Media Art</p>*/}
-      <p> <b>Credits:</b> 30/100 Required</p>
-      <p> <b> University Credits: </b> 22/100 Required</p>
-      <p> <b> Completed Requirements:</b> 2/8
+      <p> <b>Credits:</b> 30/120 Required
+      <span><img data-tip={TotalCreditsTooltipText} src={info} className="info-icon" alt="info icon" /></span>
+      <ReactTooltip place="top" type="dark" effect="solid" multiline={true}/>
+      </p>
+      <p> <b> University Credits: </b> 22/100 Required
+      <span><img data-tip={TotalCreditsTooltipText} src={info} className="info-icon" alt="info icon" /></span>
+      //"University GPA includes only courses taken at Northeastern"
+      <ReactTooltip place="top" type="dark" effect="solid" multiline={true}/>
+      </p>
+      <p> <b> Completed Requirements:</b> 4/11
           <span><img data-tip={CompletedRequirementsTooltipText} src={info} className="info-icon" alt="info icon" /></span>
           <ReactTooltip place="top" type="dark" effect="solid" multiline={true}/>
       </p>
 
       <p> <b> Semester Hours: </b> 30/64 Required
           <span><img data-tip={SemesterHoursTooltipText} src={info} className="info-icon" alt="info icon" /></span>
+          //Students must earn a minimum of 64 Northeastern University semester hours in order to receive a bachelor's degree. ";
           <ReactTooltip place="top" type="dark" effect="solid"/>
       </p>
 
@@ -114,7 +123,7 @@ class Degree extends Component {
       {this.state.expandedGPA &&
         <div className="expandedGPASection">
         <p> A minimum total GPA of 2.0 is required to graduate. </p>
-        <p> A minimum degree GPA of 2.3 if required to graduate. </p>
+        <p> A minimum degree GPA of 2.3 is required to graduate. </p>
 
 
           <p> <b> Degree GPA:</b> 3.0
@@ -137,7 +146,7 @@ class Degree extends Component {
       <a id="main-requirements"/>
       <h2>Computer Science </h2>
       </div>
-      <p> 1/3 of Computer Science Requirements Satisfied </p>
+      <p> 1/3 Computer Science Requirements Satisfied </p>
 
       <div className="ReqFormat">
       <h4> Overview Requirements </h4>
@@ -170,7 +179,7 @@ class Degree extends Component {
 </div>
 
 <h4> Fundemental Courses </h4>
-<p> A grade of C- or higher is required in all compute science fundemental courses" </p>
+<p> A grade of C- or higher is required in all compute science fundemental courses </p>
 
 <div className = "requirementTable" >
 
@@ -224,8 +233,8 @@ class Degree extends Component {
       <tr>
         <td>THTR 1170</td>
         <td>The Eloquent Presenter</td>
-        <td> </td>
-        <td> </td>
+        <td> Unattempted </td>
+        <td> - </td>
         <td>1</td>
       </tr>
       </table>
@@ -238,7 +247,7 @@ class Degree extends Component {
       <h2> Art </h2>
       </div>
 
-      <p> 0/2 of  Media Art Requirements Satisfied </p>
+      <p> 0/2 Media Art Requirements Satisfied </p>
 
       <div className="ReqFormat">
       <h4> Required Media Art Courses </h4>
@@ -263,8 +272,8 @@ class Degree extends Component {
       <tr>
         <td> ARTF 1141 - ARTF 1149</td>
         <td>Complete one course in the range		</td>
-        <td></td>
-        <td></td>
+        <td> Unattempted</td>
+        <td> - </td>
         <td>4</td>
       </tr>
 
@@ -317,7 +326,7 @@ class Degree extends Component {
         <td>ARTD 2370</td>
         <td>Animation Basics	 </td>
         <td> In progress </td>
-        <td> </td>
+        <td> - </td>
         <td> 4 </td>
       </tr>
 
@@ -325,7 +334,7 @@ class Degree extends Component {
         <td>ARTD 2380</td>
         <td> Video Basics	 </td>
         <td> In progress </td>
-        <td> </td>
+        <td> - </td>
         <td>4</td>
       </tr>
 
@@ -344,12 +353,15 @@ class Degree extends Component {
       <a id="general-requirements"/>
       <h2> NUPath </h2>
       </div>
+      <p> 2/7 NUPATH Requirements Satisfied </p>
 
-      <p> Multiple courses may fulfill NUpath requirements</p>
+      <p> For more information on which courses count towards NUPATH requirement visit <a href="https://www.northeastern.edu/core/"> northeastern.edu/core</a> </p>
 
       <div className="ReqFormat">
-      <h4> Engaging with the Natural and Designed World </h4>
-      <h4> Exploring Creative Expression and Innovation </h4>
+
+
+
+
       <div className = "requirementTable" >
 
             <table>
@@ -359,6 +371,13 @@ class Degree extends Component {
             <th>Grade</th>
             <th>Credits</th>
 
+            <tr>
+              <td>-</td>
+              <td>Engaging with the Natural and Designed World	 </td>
+              <td> Unattempted </td>
+              <td>-</td>
+              <td>-</td>
+            </tr>
 
             <tr>
               <td>ARTF 1120	</td>
@@ -368,21 +387,20 @@ class Degree extends Component {
               <td>4</td>
             </tr>
 
-
-          </table>
-            </div>
-      <h4> Conducting Formal and Quantitative Reasoning </h4>
-      <h4> Analyzing and Using Data </h4>
-
-      <h4> Writing Intensives </h4>
-      <div className = "requirementTable" >
-
-            <table>
-            <th>Course Number</th>
-            <th>Title</th>
-            <th>Status</th>
-            <th>Grade</th>
-            <th>Credits</th>
+            <tr>
+              <td>-</td>
+              <td> Conducting Formal and Quantitative Reasoning	 </td>
+              <td> Unattempted </td>
+              <td>-</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td>-</td>
+              <td> Analyzing and Using Data	 </td>
+              <td> Unattempted </td>
+              <td>-</td>
+              <td>-</td>
+            </tr>
 
             <tr>
               <td>ENG 1100</td>
@@ -392,19 +410,27 @@ class Degree extends Component {
               <td>4</td>
             </tr>
 
+
+
             <tr>
-              <td>ENG 3010, ENG 3001</td>
-              <td> Choose between: Interdisplinary Advanced Writing, Advanced Writing for Technical Fields</td>
-              <td> </td>
-              <td> </td>
-              <td>4</td>
+              <td>-</td>
+              <td> Advanced Writing</td>
+              <td>Unattempted </td>
+              <td> -</td>
+              <td>-</td>
+            </tr>
+
+            <tr>
+              <td>-</td>
+              <td>Integrating Knowledge and Skills Through Experience</td>
+              <td>Unattempted </td>
+              <td> -</td>
+              <td>-</td>
             </tr>
 
           </table>
             </div>
 
-            <h4> Integrating Knowledge and Skills Through Experience </h4>
-<p> This requirement may be fulfilled through Co-op, Study Abroad, or Research </p>
 
       </div>
       </div>
