@@ -14,6 +14,8 @@
 
 }
 
+
+
 .header1 {
   background-color: #ff5242;
   color: white;
@@ -51,12 +53,14 @@
 
 .ReqFormat {
   margin-left: 2%;
-/*  text-align: left;*/
 }
 
 .requirementTable {
   margin-left: 10%;
+}
 
+.Completed {
+  color: #595959;
 }
 
 table {

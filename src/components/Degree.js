@@ -98,7 +98,6 @@ class Degree extends Component {
       </p>
       <p> <b> University Credits: </b> 22/100 Required
       <span><img data-tip={TotalCreditsTooltipText} src={info} className="info-icon" alt="info icon" /></span>
-      //"University GPA includes only courses taken at Northeastern"
       <ReactTooltip place="top" type="dark" effect="solid" multiline={true}/>
       </p>
       <p> <b> Completed Requirements:</b> 4/11
@@ -108,7 +107,6 @@ class Degree extends Component {
 
       <p> <b> Semester Hours: </b> 30/64 Required
           <span><img data-tip={SemesterHoursTooltipText} src={info} className="info-icon" alt="info icon" /></span>
-          //Students must earn a minimum of 64 Northeastern University semester hours in order to receive a bachelor's degree. ";
           <ReactTooltip place="top" type="dark" effect="solid"/>
       </p>
 
@@ -161,19 +159,19 @@ class Degree extends Component {
 
       </tr>
       <tr>
-        <td>cs1200</td>
-        <td>Leadership Skills</td>
-        <td>Completed</td>
-        <td>P</td>
-        <td>1</td>
+        <td><div className= "Completed">cs1200 </div> </td>
+        <td><div className= "Completed">Leadership Skills</div></td>
+        <td><div className= "Completed">Completed</div></td>
+        <td><div className= "Completed">P</div></td>
+        <td><div className= "Completed">1</div></td>
       </tr>
 
       <tr>
-        <td>cs1210</td>
-        <td> Professional Development for Khoury Co-op	</td>
-        <td>Completed</td>
-        <td>P</td>
-        <td>1</td>
+        <td><div className= "Completed">cs1210</div></td>
+        <td> <div className= "Completed">Professional Development for Khoury Co-op</div>	</td>
+        <td><div className= "Completed">Completed</div></td>
+        <td><div className= "Completed">P</div></td>
+        <td><div className= "Completed">1</div></td>
       </tr>
       </table>
 </div>
@@ -192,20 +190,21 @@ class Degree extends Component {
 
 
       <tr>
-        <td>CS 1800</td>
-        <td>Discrete Structures </td>
-        <td> Completed </td>
-        <td>B</td>
-        <td>5</td>
+        <td><div className= "Completed">CS 1800</div></td>
+        <td><div className= "Completed">Discrete Structures </div></td>
+        <td><div className= "Completed"> Completed</div> </td>
+        <td><div className= "Completed">B</div></td>
+        <td><div className= "Completed">5</div></td>
       </tr>
 
       <tr>
-        <td>CS 2500</td>
-        <td>Fundamentals of Computer Science 1 </td>
-        <td> Completed </td>
-        <td>B-</td>
-        <td>5</td>
+        <td><div className= "Completed">CS 2500 </div></td>
+        <td><div className= "Completed">Fundamentals of Computer Science 1</div> </td>
+        <td> <div className= "Completed">Completed</div> </td>
+        <td><div className= "Completed">B-</div></td>
+        <td><div className= "Completed">5</div></td>
       </tr>
+
 
       <tr>
         <td>CS 2510</td>
@@ -262,42 +261,42 @@ class Degree extends Component {
 
       </tr>
       <tr>
-        <td>ARTF 1120</td>
-        <td>Observational Drawing	</td>
-        <td>Completed</td>
-        <td>B</td>
-        <td>4</td>
+        <td> <div className= "Completed"> ARTF 1120 </div> </td>
+        <td><div className= "Completed">Observational Drawing </div>	</td>
+        <td><div className= "Completed">Completed </div></td>
+        <td><div className= "Completed"> B </div></td>
+        <td> <div className= "Completed">4 </div></td>
       </tr>
 
       <tr>
-        <td> ARTF 1141 - ARTF 1149</td>
-        <td>Complete one course in the range		</td>
-        <td> Unattempted</td>
-        <td> - </td>
-        <td>4</td>
+        <td> ARTF 1141 - ARTF 1149  </td>
+        <td> <i> Complete one course in the range		</i></td>
+        <td> Unattempted </td>
+        <td> -  </td>
+        <td> 4 </td>
       </tr>
 
       <tr>
-        <td>ARTF 1122</td>
-        <td> 2D Fundamentals: Surface and Drawing (with optional ARTF 1123)		</td>
-        <td>Completed</td>
-        <td>A</td>
-        <td>4</td>
+        <td><div className= "Completed">ARTF 1122</div></td>
+        <td> <div className= "Completed">2D Fundamentals: Surface and Drawing</div></td>
+        <td><div className= "Completed">Completed</div></td>
+        <td><div className= "Completed">A</div></td>
+        <td><div className= "Completed">4</div></td>
       </tr>
 
       <tr>
-        <td>ARTF 1124</td>
-        <td> 3D Fundamentals: Structure and Drawing		</td>
-        <td>Completed</td>
-        <td>C+</td>
-        <td>4</td>
+        <td><div className= "Completed">ARTF 1124</div></td>
+        <td> <div className= "Completed">3D Fundamentals: Structure and Drawing	</div>	</td>
+        <td><div className= "Completed">Completed</div></td>
+        <td><div className= "Completed">C+</div></td>
+        <td><div className= "Completed">4</div></td>
       </tr>
       <tr>
-        <td>ARTF 1125	</td>
-        <td> 3D Tools		</td>
-        <td>Completed</td>
-        <td>C+</td>
-        <td>1</td>
+        <td><div className= "Completed">ARTF 1125	</div></td>
+        <td> <div className= "Completed">3D Tools	</div>	</td>
+        <td><div className= "Completed">Completed</div></td>
+        <td><div className= "Completed">C+</div></td>
+        <td><div className= "Completed">1</div></td>
       </tr>
       </table>
 </div>
@@ -315,11 +314,11 @@ class Degree extends Component {
 
 
       <tr>
-        <td>ARTD 2360</td>
-        <td>Photo Basics	 </td>
-        <td> Completed </td>
-        <td>B</td>
-        <td>4</td>
+        <td><div className= "Completed">ARTD 2360 </div></td>
+        <td><div className= "Completed">Photo Basics	</div> </td>
+        <td> <div className= "Completed">Completed</div> </td>
+        <td><div className= "Completed">B </div></td>
+        <td><div className= "Completed">4 </div></td>
       </tr>
 
       <tr>
@@ -355,7 +354,7 @@ class Degree extends Component {
       </div>
       <p> 2/7 NUPATH Requirements Satisfied </p>
 
-      <p> For more information on which courses count towards NUPATH requirement visit <a href="https://www.northeastern.edu/core/"> northeastern.edu/core</a> </p>
+      <p> For more information on which courses count towards NUPATH requirements visit <a href="https://www.northeastern.edu/core/"> northeastern.edu/core</a> </p>
 
       <div className="ReqFormat">
 
@@ -380,11 +379,11 @@ class Degree extends Component {
             </tr>
 
             <tr>
-              <td>ARTF 1120	</td>
-              <td>Observational Drawing		 </td>
-              <td> Completed </td>
-              <td>B</td>
-              <td>4</td>
+              <td><div className= "Completed">ARTF 1120	</div></td>
+              <td><div className= "Completed">Observational Drawing	</div>	 </td>
+              <td><div className= "Completed"> Completed</div> </td>
+              <td><div className= "Completed">B</div></td>
+              <td><div className= "Completed">4</div></td>
             </tr>
 
             <tr>
@@ -403,11 +402,11 @@ class Degree extends Component {
             </tr>
 
             <tr>
-              <td>ENG 1100</td>
-              <td>Writing in the First Year	 </td>
-              <td> Completed </td>
-              <td>A</td>
-              <td>4</td>
+              <td><div className= "Completed">ENG 1100 </div></td>
+              <td><div className= "Completed">Writing in the First Year	</div> </td>
+              <td><div className= "Completed"> Completed</div> </td>
+              <td><div className= "Completed">A </div></td>
+              <td><div className= "Completed">4 </div></td>
             </tr>
 
 
