@@ -7,14 +7,14 @@ import arrowUp from '../media/arrow-up.svg';
 import arrowDown from '../media/arrow-down.svg';
 import DegreeSidebar from "./DegreeSidebar";
 
-const TotalCreditsTooltipText = "This includes credits from all courses taken at Northeastern and accepted transfer credits.";
-const ProgramCreditsTooltipText = "This includes only credits from courses that are required for a student's major. Each degree requires a different credit minimum in order to be completed.";
-const UniversityCreditsTooltipText = "Students must earn a minimum of 64 credits from courses at Northeastern in order to receive a bachelor's degree.";
+const TotalCreditsTooltipText = "This includes credits from all courses taken <br/>at Northeastern and accepted transfer credits.";
+const ProgramCreditsTooltipText = "This includes only credits from courses that are required for a student's major.<br/> Each degree requires a different credit minimum in order to be completed.";
+const UniversityCreditsTooltipText = "Students must earn a minimum of 64 credits from courses <br/>at Northeastern in order to receive a bachelor's degree.";
 
 
 const UniversityDegreeTooltipText = "University GPA includes only courses taken at Northeastern.";
-const CompletedRequirementsTooltipText = "Each degree is broken down into a series of requirements, including both major requirements and university-wide requirements.";
-const MajorGPATooltipText = "Degree GPA only includes courses that fulfill the requirements of a student's major.";
+const CompletedRequirementsTooltipText = "Each degree is broken down into a series of requirements, <br/> including both major requirements and university-wide requirements.";
+const MajorGPATooltipText = "Degree GPA only includes courses that<br/> fulfill the requirements of a student's major.";
 
 
 class Degree extends Component {
@@ -109,7 +109,7 @@ class Degree extends Component {
 
       <p> <b> University Credits: </b> 30/64 Required
           <span><img data-tip={UniversityCreditsTooltipText} src={info} className="info-icon" alt="info icon" /></span>
-          <ReactTooltip place="top" type="dark" effect="solid"/>
+          <ReactTooltip place="top" type="dark" effect="solid" multiline={true}/>
       </p>
 
       <button type="button" class="MultipleGPA" onClick={() => this.setState({
@@ -172,17 +172,17 @@ class Degree extends Component {
       </button>
       {this.state.expandedGPA &&
         <div className="expandedGPASection">
-      <p> A minimum total GPA of 2.0 is required to graduate. </p>
+        <p> A minimum total GPA of 2.0 is required to graduate. </p>
         <p> A minimum degree GPA of 2.3 is required to graduate. </p>
 
 
           <p> <b> Degree GPA:</b> 3.0
             <span><img data-tip={MajorGPATooltipText} src={info} className="info-icon" alt="info icon" /></span>
-            <ReactTooltip place="top" type="dark" effect="solid"/>
+            <ReactTooltip place="top" type="dark" effect="solid"multiline={true}/>
           </p>
           <p> <b> University GPA: </b> 3.1
             <span><img data-tip={UniversityDegreeTooltipText} src={info} className="info-icon" alt="info icon" /></span>
-            <ReactTooltip place="top" type="dark" effect="solid"/>
+            <ReactTooltip place="top" type="dark" effect="solid"multiline={true}/>
           </p>
         </div>}
 </div>
@@ -417,7 +417,7 @@ class Degree extends Component {
 
             <table>
             <th>Course Number</th>
-            <th>Title</th>
+            <th>Requirement</th>
             <th>Status</th>
             <th>Grade</th>
             <th>Credits</th>
@@ -491,9 +491,9 @@ class Degree extends Component {
       <div className="header1">
       <h2> Transfer Credits </h2>
       </div>
+      <p> Only AP credits above 3 are accepted for credit </p>
 
       <div className = "requirementTable" >
-      <p> Only AP credits above 3 are accepted for credit </p>
 
             <table>
             <th>Title</th>
