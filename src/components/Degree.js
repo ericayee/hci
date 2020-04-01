@@ -7,12 +7,14 @@ import arrowUp from '../media/arrow-up.svg';
 import arrowDown from '../media/arrow-down.svg';
 import DegreeSidebar from "./DegreeSidebar";
 
-const TotalCreditsTooltipText = "This includes credits from ";
+const TotalCreditsTooltipText = "This includes credits from all courses taken at Northeastern and accepted transfer credits.";
+const ProgramCreditsTooltipText = "This includes only credits from courses that are required for a student's major. Each degree requires a different credit minimum in order to be completed.";
+const UniversityCreditsTooltipText = "Students must earn a minimum of 64 credits from courses at Northeastern in order to receive a bachelor's degree.";
 
-const CompletedRequirementsTooltipText = "Each degree is broken down into a series of requirements, including both major requirements and university-wide requirements";
-const MajorGPATooltipText = "Degree GPA only includes courses that fulfill the requirements of a student's major";
-const UniversityDegreeTooltipText = "University GPA includes only courses taken at Northeastern";
-const SemesterHoursTooltipText = "Students must earn a minimum of 64 Northeastern University semester hours in order to receive a bachelor's degree. ";
+
+const UniversityDegreeTooltipText = "University GPA includes only courses taken at Northeastern.";
+const CompletedRequirementsTooltipText = "Each degree is broken down into a series of requirements, including both major requirements and university-wide requirements.";
+const MajorGPATooltipText = "Degree GPA only includes courses that fulfill the requirements of a student's major.";
 
 
 class Degree extends Component {
@@ -90,24 +92,28 @@ class Degree extends Component {
       </div>
       <div className="sumText">
 
+
+
+
       <p> <b>Degree:</b> {this.state.degreeName}</p>
       {/*<p> <b>Degree:</b> Computer Science/Media Art</p>*/}
-      <p> <b>Credits:</b> 30/120 Required
+      <p> <b> Total Credits:</b> 30
       <span><img data-tip={TotalCreditsTooltipText} src={info} className="info-icon" alt="info icon" /></span>
       <ReactTooltip place="top" type="dark" effect="solid" multiline={true}/>
       </p>
-      <p> <b> University Credits: </b> 22/100 Required
-      <span><img data-tip={TotalCreditsTooltipText} src={info} className="info-icon" alt="info icon" /></span>
+      <p> <b> Pogram Credits: </b> 22/100 Required
+      <span><img data-tip={ProgramCreditsTooltipText} src={info} className="info-icon" alt="info icon" /></span>
       <ReactTooltip place="top" type="dark" effect="solid" multiline={true}/>
       </p>
+
+      <p> <b> University Credits: </b> 30/64 Required
+          <span><img data-tip={UniversityCreditsTooltipText} src={info} className="info-icon" alt="info icon" /></span>
+          <ReactTooltip place="top" type="dark" effect="solid"/>
+      </p>
+
       <p> <b> Completed Requirements:</b> 4/11
           <span><img data-tip={CompletedRequirementsTooltipText} src={info} className="info-icon" alt="info icon" /></span>
           <ReactTooltip place="top" type="dark" effect="solid" multiline={true}/>
-      </p>
-
-      <p> <b> Semester Hours: </b> 30/64 Required
-          <span><img data-tip={SemesterHoursTooltipText} src={info} className="info-icon" alt="info icon" /></span>
-          <ReactTooltip place="top" type="dark" effect="solid"/>
       </p>
 
       <button type="button" class="MultipleGPA" onClick={() => this.setState({
