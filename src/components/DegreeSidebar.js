@@ -23,27 +23,27 @@ class DegreeSidebar extends Component {
 
   render() {
     return (
-      <div class="sidenav">
+      <div className="sidenav">
 		<Link to='/'>
-		<button class="home-btn">Home</button>
+		<button className="home-btn">Home</button>
 		</Link>
         <a href="#summary">Summary</a>
         <a href="#main-requirements">Computer Science</a>
         <a href="#art-requirements">Art</a>
         <a href="#general-requirements">NuPath</a>
         <a href="#transfer">Transfer Credit</a>
-        {/*}<button class="dropdown-btn">
+        {/*}<button className="dropdown-btn">
           Dropdown
-          <i class="fa-caret-down"></i>
+          <i className="fa-caret-down"></i>
         </button>
-        <div class="dropdown-container">
+        <div className="dropdown-container">
           <a href="#">Link 1</a>
           <a href="#">Link 2</a>
           <a href="#">Link 3</a>
         </div>
         */}
         {/*<Dropdown
-          class="dropdown-btn"
+          className="dropdown-btn"
           text="dropdown"
           onClick={this.handleDropdown}
         >
@@ -51,11 +51,11 @@ class DegreeSidebar extends Component {
             <Dropdown.Item text="List Item" />
           </Dropdown.Menu>
         </Dropdown>
-        <button class="dropdown-btn">
+        <button className="dropdown-btn">
           Dropdown
-          <i class="fa fa-caret-down"></i>
+          <i className="fa fa-caret-down"></i>
         </button>
-        <div class="dropdown-container">
+        <div className="dropdown-container">
           <a href="#">Link 1</a>
           <a href="#">Link 2</a>
           <a href="#">Link 3</a>
