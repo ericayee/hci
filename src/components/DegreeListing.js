@@ -36,7 +36,8 @@ class DegreeListing extends Component {
           <div className="degree-listing-view">
             <Link to={{
               pathname: '/degree',
-              degreeName: this.props.degree
+              degreeName: this.props.degree,
+              explore: true
             }}>
               <button class="explore-btn">View degree</button>
             </Link>

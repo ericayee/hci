@@ -88,21 +88,21 @@ class Degree extends Component {
       <DegreeSidebar/>
       <div className="summary">
       <div className="header1">
-      <a id="summary"/>
-      <h2>Summary</h2>
+        <a id="summary"/>
+        <h2>Summary</h2>
       </div>
       <div className="sumText">
 
 
 
-
+      {this.props.location.explore && <h4><i>Currently exploring...</i></h4>}
       <p> <b>Degree:</b> {this.state.degreeName}</p>
       {/*<p> <b>Degree:</b> Computer Science/Media Art</p>*/}
       <p> <b> Total Credits:</b> 30
       <span><img data-tip={TotalCreditsTooltipText} src={info} className="info-icon" alt="info icon" /></span>
       <ReactTooltip place="top" type="dark" effect="solid" multiline={true}/>
       </p>
-      <p> <b> Pogram Credits: </b> 22/100 Required
+      <p> <b> Program Credits: </b> 22/100 Required
       <span><img data-tip={ProgramCreditsTooltipText} src={info} className="info-icon" alt="info icon" /></span>
       <ReactTooltip place="top" type="dark" effect="solid" multiline={true}/>
       </p>
@@ -190,7 +190,6 @@ class Degree extends Component {
 
 
       </div>
-
       <div className="Computer Science">
       <div className="header1">
       <a id="main-requirements"/>

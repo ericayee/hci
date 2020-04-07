@@ -40,7 +40,7 @@ export const degrees = [
     link: "http://catalog.northeastern.edu/undergraduate/computer-information-science/computer-science/bacs/"
   },
   {
-    value: 'bs-compsci',
+    value: 'bs-csma',
     college: 'khoury',
     program: 'Computer Science',
     degree: 'B.S. Computer Science/Media Art',
