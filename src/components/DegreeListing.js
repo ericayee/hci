@@ -29,7 +29,7 @@ class DegreeListing extends Component {
           </div>
           <div className="degree-listing-link">
             <button class="explore-btn">
-              <a href={this.props.link} target="_blank" rel="noopener noreferrer">Catalog page&nbsp;
+              <a href={this.props.link} target="_blank" rel="noopener noreferrer">View catalog&nbsp;
               <span><img src={arrowUpRight} className="arrow-icon" alt="upper right arrow" /></span></a>
             </button>
           </div>
