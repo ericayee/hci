@@ -6,6 +6,7 @@ import info from '../media/info-icon.svg';
 import arrowUp from '../media/arrow-up.svg';
 import arrowDown from '../media/arrow-down.svg';
 import DegreeSidebar from "./DegreeSidebar";
+import RequirementsTable from "./requirementTable";
 
 const TotalCreditsTooltipText = "This includes credits from all courses taken <br/>at Northeastern and accepted transfer credits.";
 const ProgramCreditsTooltipText = "This includes only credits from courses that are required for a student's major.<br/> Each degree requires a different credit minimum in order to be completed.";
@@ -16,6 +17,29 @@ const UniversityDegreeTooltipText = "University GPA includes only courses taken 
 const CompletedRequirementsTooltipText = "Each degree is broken down into a series of requirements, <br/> including both major requirements and university-wide requirements.";
 const MajorGPATooltipText = "Degree GPA only includes courses that<br/> fulfill the requirements of a student's major.";
 
+const comp_sci_data = [
+  {
+    courseNumber: "CS 1800",
+    title: "Discrete Structures",
+    status: "Completed",
+    grade: "B ",
+    credits: 5,
+  },
+  {
+    courseNumber: 'CS 2500',
+    title: 'Fundamentals of Computer Science 1',
+    status: 'Completed',
+    grade:'B-',
+    credits: 5
+  },
+  {
+    courseNumber: 'CS 2510',
+    title: 'Fundamentals of Computer Science 2',
+    status: 'In Progress',
+    grade: '-',
+    credits: 5
+  }
+];
 
 class Degree extends Component {
   constructor(props) {
@@ -230,65 +254,18 @@ class Degree extends Component {
 <h4> Fundemental Courses </h4>
 <p> A grade of C- or higher is required in all compute science fundemental courses </p>
 
-<div className = "requirementTable" >
 
-      <table>
-      <th>Course Number</th>
-      <th>Title</th>
-      <th>Status</th>
-      <th>Grade</th>
-      <th>Credits</th>
-
-
-      <tr>
-        <td><div className= "Completed">CS 1800</div></td>
-        <td><div className= "Completed">Discrete Structures </div></td>
-        <td><div className= "Completed"> Completed</div> </td>
-        <td><div className= "Completed">B</div></td>
-        <td><div className= "Completed">5</div></td>
-      </tr>
-
-      <tr>
-        <td><div className= "Completed">CS 2500 </div></td>
-        <td><div className= "Completed">Fundamentals of Computer Science 1</div> </td>
-        <td> <div className= "Completed">Completed</div> </td>
-        <td><div className= "Completed">B-</div></td>
-        <td><div className= "Completed">5</div></td>
-      </tr>
-
-
-      <tr>
-        <td>CS 2510</td>
-        <td>Fundamentals of Computer Science 2 </td>
-        <td> In Progress </td>
-        <td> - </td>
-        <td>5</td>
-      </tr>
-
-
-    </table>
-      </div>
+<RequirementsTable data={comp_sci_data}/>
 
       <h4> Presentation Requirement </h4>
-      <div className = "requirementTable" >
-      <table>
-      <tr>
-        <th>Course Number</th>
-        <th>Title</th>
-        <th>Status</th>
-        <th>Grade</th>
-        <th>Credits</th>
 
-      </tr>
-      <tr>
-        <td>THTR 1170</td>
-        <td>The Eloquent Presenter</td>
-        <td> Unattempted </td>
-        <td> - </td>
-        <td>1</td>
-      </tr>
-      </table>
-      </div>
+  <RequirementsTable data={[{
+    courseNumber: 'THTR 1170',
+    title: 'The Eloquent Presenter',
+    status: 'Unattempted',
+    grade: '-',
+    credits: '1'
+  }]}/>
       </div>
 </div>
       <div className="Media Art">

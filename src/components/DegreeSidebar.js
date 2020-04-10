@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-// import { Dropdown } from "semantic-ui-react";
 import { Link } from 'react-router-dom';
 
 class DegreeSidebar extends Component {
@@ -32,34 +31,6 @@ class DegreeSidebar extends Component {
         <a href="#art-requirements">Art</a>
         <a href="#general-requirements">NuPath</a>
         <a href="#transfer">Transfer Credit</a>
-        {/*}<button className="dropdown-btn">
-          Dropdown
-          <i className="fa-caret-down"></i>
-        </button>
-        <div className="dropdown-container">
-          <a href="#">Link 1</a>
-          <a href="#">Link 2</a>
-          <a href="#">Link 3</a>
-        </div>
-        */}
-        {/*<Dropdown
-          className="dropdown-btn"
-          text="dropdown"
-          onClick={this.handleDropdown}
-        >
-          <Dropdown.Menu>
-            <Dropdown.Item text="List Item" />
-          </Dropdown.Menu>
-        </Dropdown>
-        <button className="dropdown-btn">
-          Dropdown
-          <i className="fa fa-caret-down"></i>
-        </button>
-        <div className="dropdown-container">
-          <a href="#">Link 1</a>
-          <a href="#">Link 2</a>
-          <a href="#">Link 3</a>
-	</div> */}
       </div>
     );
   }
