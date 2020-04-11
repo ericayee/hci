@@ -82,14 +82,42 @@
 table {
   width: 80%;
   height: 20px;
+  margin-left: 10%;
+  border-collapse: collapse;
 }
 
 table th {
 background-color: orange;
+
 }
 
+table thead {
+  background-color: orange;
+  
+  }
+
 table td {
-max-width: 30%;
+max-width: 150px;
+/*color: #595959; */
+}
+
+
+.sortStatus {
+  width: 15px;
+  cursor: pointer;
+  margin-left: 15px;
+  background-color: orange;
+  border-collapse: collapse;
+  
+}
+
+.statusHeader {
+  border: none;
+  outline: none;
+  font-size: 17px;
+  border-collapse: collapse;
+  background-color: orange;
+  font-weight: 700;
 }
 
 .sidenav {
