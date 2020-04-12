@@ -19,3 +19,4 @@ joseph.pr@husky.neu.edu
 * [T4 Paper Prototyping Part 1](assignments/T4-JosephMorelYee.pdf)
 * [T5 Paper Prototyping Part 2](assignments/T5-JosephMorelYee.pdf)
 * T6 Computer Prototyping | [README](T6_README.md) | [prototype](https://ericayee.com/hci-t6/)
+* T9: Final Presentation | [slides (PDF)](assignments/T9-JosephMorelYee-Slides.pdf) | [practice video (Google Drive)](https://drive.google.com/file/d/1Osqfm6pZVdbxGTrnMwV8mCCta36F9yQ7/view)
