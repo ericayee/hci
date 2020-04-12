@@ -2,6 +2,7 @@ import React, { Component } from "react";
 //import { NavLink } from 'react-router-dom';
 import './Degree.css';
 import ReactTooltip from 'react-tooltip';
+import { comp_sci_data, media_arts_electives, media_arts_req, nupath, overview_req } from '../data/DegreeData'
 import info from '../media/info-icon.svg';
 import arrowUp from '../media/arrow-up.svg';
 import arrowDown from '../media/arrow-down.svg';
@@ -17,29 +18,6 @@ const UniversityDegreeTooltipText = "University GPA includes only courses taken 
 const CompletedRequirementsTooltipText = "Each degree is broken down into a series of requirements, <br/> including both major requirements and university-wide requirements.";
 const MajorGPATooltipText = "Degree GPA only includes courses that<br/> fulfill the requirements of a student's major.";
 
-const comp_sci_data = [
-  {
-    courseNumber: "CS 1800",
-    title: "Discrete Structures",
-    status: 0,
-    grade: "B ",
-    credits: 5,
-  },
-  {
-    courseNumber: 'CS 2500',
-    title: 'Fundamentals of Computer Science 1',
-    status: 0,
-    grade:'B-',
-    credits: 5
-  },
-  {
-    courseNumber: 'CS 2510',
-    title: 'Fundamentals of Computer Science 2',
-    status: 1,
-    grade: '-',
-    credits: 5
-  }
-];
 
 class Degree extends Component {
   constructor(props) {
@@ -223,33 +201,7 @@ class Degree extends Component {
 
       <div className="ReqFormat">
       <h4> Overview Requirements </h4>
-      <div className = "requirementTable" >
-      <table>
-      <tr>
-        <th>Course Number</th>
-        <th>Title</th>
-        <th>Status</th>
-        <th>Grade</th>
-        <th>Credits</th>
-
-      </tr>
-      <tr>
-        <td><div className= "Completed">cs1200 </div> </td>
-        <td><div className= "Completed">Leadership Skills</div></td>
-        <td><div className= "Completed">Completed</div></td>
-        <td><div className= "Completed">P</div></td>
-        <td><div className= "Completed">1</div></td>
-      </tr>
-
-      <tr>
-        <td><div className= "Completed">cs1210</div></td>
-        <td> <div className= "Completed">Professional Development for Khoury Co-op</div>	</td>
-        <td><div className= "Completed">Completed</div></td>
-        <td><div className= "Completed">P</div></td>
-        <td><div className= "Completed">1</div></td>
-      </tr>
-      </table>
-</div>
+      <RequirementsTable data={overview_req}/>
 
 <h4> Fundemental Courses </h4>
 <p> A grade of C- or higher is required in all compute science fundemental courses </p>
@@ -262,7 +214,7 @@ class Degree extends Component {
   <RequirementsTable data={[{
     courseNumber: 'THTR 1170',
     title: 'The Eloquent Presenter',
-    status: '2',
+    status: 2,
     grade: '-',
     credits: '1'
   }]}/>
@@ -278,100 +230,12 @@ class Degree extends Component {
 
       <div className="ReqFormat">
       <h4> Required Media Art Courses </h4>
-      <div className = "requirementTable" >
-      <table>
-      <tr>
-        <th>Course Number</th>
-        <th>Title</th>
-        <th>Status</th>
-        <th>Grade</th>
-        <th>Credits</th>
+      <RequirementsTable data={media_arts_req}/>
 
-      </tr>
-      <tr>
-        <td> <div className= "Completed"> ARTF 1120 </div> </td>
-        <td><div className= "Completed">Observational Drawing </div>	</td>
-        <td><div className= "Completed">Completed </div></td>
-        <td><div className= "Completed"> B </div></td>
-        <td> <div className= "Completed">4 </div></td>
-      </tr>
-
-      <tr>
-        <td> ARTF 1141 - ARTF 1149  </td>
-        <td> <i> Complete one course in the range		</i></td>
-        <td> Unattempted </td>
-        <td> -  </td>
-        <td> 4 </td>
-      </tr>
-
-      <tr>
-        <td><div className= "Completed">ARTF 1122</div></td>
-        <td> <div className= "Completed">2D Fundamentals: Surface and Drawing</div></td>
-        <td><div className= "Completed">Completed</div></td>
-        <td><div className= "Completed">A</div></td>
-        <td><div className= "Completed">4</div></td>
-      </tr>
-
-      <tr>
-        <td><div className= "Completed">ARTF 1124</div></td>
-        <td> <div className= "Completed">3D Fundamentals: Structure and Drawing	</div>	</td>
-        <td><div className= "Completed">Completed</div></td>
-        <td><div className= "Completed">C+</div></td>
-        <td><div className= "Completed">4</div></td>
-      </tr>
-      <tr>
-        <td><div className= "Completed">ARTF 1125	</div></td>
-        <td> <div className= "Completed">3D Tools	</div>	</td>
-        <td><div className= "Completed">Completed</div></td>
-        <td><div className= "Completed">C+</div></td>
-        <td><div className= "Completed">1</div></td>
-      </tr>
-      </table>
-</div>
-
-<h4> Media Arts Electives </h4>
-
-<div className = "requirementTable" >
-
-      <table>
-      <th>Course Number</th>
-      <th>Title</th>
-      <th>Status</th>
-      <th>Grade</th>
-      <th>Credits</th>
-
-
-      <tr>
-        <td><div className= "Completed">ARTD 2360 </div></td>
-        <td><div className= "Completed">Photo Basics	</div> </td>
-        <td> <div className= "Completed">Completed</div> </td>
-        <td><div className= "Completed">B </div></td>
-        <td><div className= "Completed">4 </div></td>
-      </tr>
-
-      <tr>
-        <td>ARTD 2370</td>
-        <td>Animation Basics	 </td>
-        <td> In progress </td>
-        <td> - </td>
-        <td> 4 </td>
-      </tr>
-
-      <tr>
-        <td>ARTD 2380</td>
-        <td> Video Basics	 </td>
-        <td> In progress </td>
-        <td> - </td>
-        <td>4</td>
-      </tr>
-
-
-    </table>
+      <h4> Media Arts Electives </h4>
+      <RequirementsTable data={media_arts_electives}/>
       </div>
-
-
       </div>
-</div>
 
 
 
@@ -383,81 +247,8 @@ class Degree extends Component {
       <p> 2/7 NUPATH Requirements Satisfied </p>
 
       <p> For more information on which courses count towards NUPATH requirements visit <a href="https://www.northeastern.edu/core/"> northeastern.edu/core</a> </p>
-
+      <RequirementsTable data={nupath}/>
       <div className="ReqFormat">
-
-
-
-
-      <div className = "requirementTable" >
-
-            <table>
-            <th>Course Number</th>
-            <th>Requirement</th>
-            <th>Status</th>
-            <th>Grade</th>
-            <th>Credits</th>
-
-            <tr>
-              <td>-</td>
-              <td>Engaging with the Natural and Designed World	 </td>
-              <td> Unattempted </td>
-              <td>-</td>
-              <td>-</td>
-            </tr>
-
-            <tr>
-              <td><div className= "Completed">ARTF 1120	</div></td>
-              <td><div className= "Completed">Observational Drawing	</div>	 </td>
-              <td><div className= "Completed"> Completed</div> </td>
-              <td><div className= "Completed">B</div></td>
-              <td><div className= "Completed">4</div></td>
-            </tr>
-
-            <tr>
-              <td>-</td>
-              <td> Conducting Formal and Quantitative Reasoning	 </td>
-              <td> Unattempted </td>
-              <td>-</td>
-              <td>-</td>
-            </tr>
-            <tr>
-              <td>-</td>
-              <td> Analyzing and Using Data	 </td>
-              <td> Unattempted </td>
-              <td>-</td>
-              <td>-</td>
-            </tr>
-
-            <tr>
-              <td><div className= "Completed">ENG 1100 </div></td>
-              <td><div className= "Completed">Writing in the First Year	</div> </td>
-              <td><div className= "Completed"> Completed</div> </td>
-              <td><div className= "Completed">A </div></td>
-              <td><div className= "Completed">4 </div></td>
-            </tr>
-
-
-
-            <tr>
-              <td>-</td>
-              <td> Advanced Writing</td>
-              <td>Unattempted </td>
-              <td> -</td>
-              <td>-</td>
-            </tr>
-
-            <tr>
-              <td>-</td>
-              <td>Integrating Knowledge and Skills Through Experience</td>
-              <td>Unattempted </td>
-              <td> -</td>
-              <td>-</td>
-            </tr>
-
-          </table>
-            </div>
-
 
       </div>
       </div>
@@ -469,7 +260,7 @@ class Degree extends Component {
       </div>
       <p> Only AP credits above 3 are accepted for credit </p>
 
-      <div className = "requirementTable" >
+      <div >
 
             <table>
             <th>Title</th>

@@ -48,3 +48,158 @@ export const degrees = [
     link: "http://catalog.northeastern.edu/undergraduate/computer-information-science/computer-information-science-combined-majors/computer-science-media-arts-bs/"
   }
 ];
+
+export const comp_sci_data = [
+  {
+    courseNumber: "CS 1800",
+    title: "Discrete Structures",
+    status: 0,
+    grade: "B ",
+    credits: 5,
+  },
+  {
+    courseNumber: 'CS 2500',
+    title: 'Fundamentals of Computer Science 1',
+    status: 0,
+    grade:'B-',
+    credits: 5
+  },
+  {
+    courseNumber: 'CS 2510',
+    title: 'Fundamentals of Computer Science 2',
+    status: 1,
+    grade: '-',
+    credits: 5
+  }
+];
+
+export const media_arts_req = [
+  {
+    courseNumber: "ART 1120",
+    title: "Observational Drawing",
+    status: 0,
+    grade: "B ",
+    credits: 4
+  },
+  {
+    courseNumber: 'ARTF 1141 - ARTF 1149',
+    title: 'Complete one course in the range',
+    status: 2,
+    grade: '-',
+    credits: 4
+  },
+  {
+    courseNumber: 'ARTF 1122',
+    title: '2D Fundamentals: Surface and Drawing',
+    status: 0,
+    grade: 'A',
+    credits: 4
+  },
+  {
+    courseNumber: 'ARTF 1124',
+    title: '3D Fundamentals: Surface and Drawing',
+    status: 0,
+    grade: 'C+',
+    credits: 4
+  },
+  {
+    courseNumber: 'ARTF 1125',
+    title: '3D Tools',
+    status: 0,
+    grade: 'C+',
+    credits: 1
+  }
+
+]
+
+export const media_arts_electives = [
+  {
+    courseNumber: 'ARTD 2360',
+    title: 'Photo Basics',
+    status: 0,
+    grade: 'B',
+    credits: 4
+  },
+  {
+    courseNumber: 'ARTD 2370',
+    title: 'Animation Basics',
+    status: 1,
+    grade: '-',
+    credits: 4
+  },
+  {
+    courseNumber: 'ARTD 2380',
+    title: 'Video Basics',
+    status: 1,
+    grade: '-',
+    credits: 4
+  }
+];
+
+export const overview_req = [{
+  courseNumber: 'CS 1200',
+  title: 'Leadership Skills',
+  status: 0,
+  grade: 'P',
+  credits: '1'
+}, 
+{
+  courseNumber: 'CS 1210',
+  title: 'Professional Development for Khoury Coop',
+  status: 0,
+  grade: 'P',
+  credits: '1'
+}
+];
+
+export const nupath = [
+  {
+  courseNumber: '-',
+  title: 'Engaging with the Natural and Designed World',
+  status: 2,
+  grade: '-',
+  credits: '-'
+},
+{
+  courseNumber: 'ARTF 1120',
+  title: 'Observational Drawing',
+  status: 0,
+  grade: 'B',
+  credits: 4
+},
+{
+  courseNumber: '-',
+  title: 'Conducting Formal and Quantitative Reasoning',
+  status: 2,
+  grade: '-',
+  credits: '-'
+},
+{
+  courseNumber: '-',
+  title: 'Analyzing and Using Data',
+  status: 2,
+  grade: '-',
+  credits: '-'
+},
+{
+  courseNumber: 'ENG 1100',
+  title: 'Writing in the First Year',
+  status: 0,
+  grade: 'A',
+  credits: '4'
+},
+{
+  courseNumber: '-',
+  title: 'Advanced Writing',
+  status: 2,
+  grade: '-',
+  credits: '-'
+},
+{
+  courseNumber: '-',
+  title: 'Integrating Knowledge and Skills Through Experience',
+  status: 2,
+  grade: '-',
+  credits: '-'
+}
+]

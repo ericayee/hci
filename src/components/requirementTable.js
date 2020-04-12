@@ -6,12 +6,7 @@ const sortTypes = {
   sortComplete: {
     class: 'sortComplete',
     fn: (a, b) => {
-      return a.status - b.status;
-      /*let tmpA = 0;
-      let tmpB = 0;
-      if (a.status === 'Complete') { tmpA = 1}
-      if (b.status === 'Complete') { tmpB = 1}
-      return*/ 
+      return a.status - b.status; 
     }
 
   },
@@ -59,6 +54,10 @@ class RequirementsTable extends Component {
 
   }
 
+  checkCompleted(i) {
+    if ( i === 0) { return 'Completed'}
+  }
+
   render() {
     const { data } = this.props;
     const { sort } = this.state;
@@ -79,7 +78,7 @@ class RequirementsTable extends Component {
         </thead>
         <tbody>
 						{[...data].sort(sortTypes[sort].fn).map(p => (
-							<tr>
+							<tr class={this.checkCompleted(p.status)}>
 								<td>{p.courseNumber}</td>
 								<td>{p.title}</td>
                 <td>{this.statusPrint(p.status)}</td>
