@@ -21,21 +21,21 @@ const comp_sci_data = [
   {
     courseNumber: "CS 1800",
     title: "Discrete Structures",
-    status: "Completed",
+    status: 0,
     grade: "B ",
     credits: 5,
   },
   {
     courseNumber: 'CS 2500',
     title: 'Fundamentals of Computer Science 1',
-    status: 'Completed',
+    status: 0,
     grade:'B-',
     credits: 5
   },
   {
     courseNumber: 'CS 2510',
     title: 'Fundamentals of Computer Science 2',
-    status: 'In Progress',
+    status: 1,
     grade: '-',
     credits: 5
   }
@@ -262,7 +262,7 @@ class Degree extends Component {
   <RequirementsTable data={[{
     courseNumber: 'THTR 1170',
     title: 'The Eloquent Presenter',
-    status: 'Unattempted',
+    status: '2',
     grade: '-',
     credits: '1'
   }]}/>

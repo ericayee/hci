@@ -3,21 +3,22 @@ import arrowUp from '../media/arrow-up.svg';
 import arrowDown from '../media/arrow-down.svg';
 
 const sortTypes = {
-  up: {
-    class: 'sort-complete',
+  sortComplete: {
+    class: 'sortComplete',
     fn: (a, b) => {
-      if(a.status == 'Complete') {
-        return a;
-      };
+      return a.status - b.status;
+      /*let tmpA = 0;
+      let tmpB = 0;
+      if (a.status === 'Complete') { tmpA = 1}
+      if (b.status === 'Complete') { tmpB = 1}
+      return*/ 
     }
 
   },
-  down: {
-    class: 'sort-not-complete',
+  sortNotComplete: {
+    class: 'sortNotComplete',
     fn: (a, b) => {
-      if(a.status != 'Complete') {
-        return a;
-      };
+      return b.status - a.status;
     }
   },
   default: {
@@ -34,21 +35,28 @@ class RequirementsTable extends Component {
     };
   }
 
-  completedStyle = () => {
-    return <></>;
-  }
-
   changeSort = () => {
+    console.log("reaches changeSort")
     const { sort } = this.state;
     let nextSort;
 
-    if (sort === 'down') nextSort = 'up';
-    else if ( sort === 'up') nextSort = 'default';
-    else if ( sort === 'default') nextSort = 'down';
+    if (sort === 'sortComplete') nextSort = 'sortNotComplete';
+    else if ( sort === 'sortNotComplete') nextSort = 'default';
+    else if ( sort === 'default') nextSort = 'sortComplete';
 
     this.setState({
       sort: nextSort
     });
+    console.log("this sort is: " + sort)
+  }
+
+  statusPrint(i) {
+    switch (i) {
+      case 0: return 'Completed';
+      case 1: return 'In Progress';
+      default: return 'Unattempted';
+    } 
+
   }
 
   render() {
@@ -60,9 +68,7 @@ class RequirementsTable extends Component {
           <tr>
             <th>Course Number</th>
             <th>Title</th>
-            <th><button class="statusHeader" onClick={() => this.setState({
-        expandedProgress: !this.state.expandedProgress
-      })}>
+            <th><button class="statusHeader" onClick={this.changeSort}>
             Status
             <img src={this.state.expandedProgress ? arrowUp : arrowDown} className="sortStatus" alt="sortStatus"/>
             </button></th>
@@ -76,7 +82,7 @@ class RequirementsTable extends Component {
 							<tr>
 								<td>{p.courseNumber}</td>
 								<td>{p.title}</td>
-                <td>{p.status}</td>
+                <td>{this.statusPrint(p.status)}</td>
 								<td>{p.grade}</td>
                 <td>{p.credits}</td>
 							</tr>
