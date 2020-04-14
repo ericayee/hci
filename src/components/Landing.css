@@ -12,11 +12,13 @@
 }
 
 .explanationParagraph {
-  margin-left: 33%;
-  margin-right: 33%;
-  font-size: 20px;
-  margin-bottom: 2%;
+  font-size: 1.25em;
+  margin: 20px auto;
+  max-width: 700px;
+}
 
-
-
+@media screen and (max-width:480px){
+  .explanationParagraph {
+    max-width: 350px;
+  }
 }
