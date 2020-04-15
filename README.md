@@ -3,7 +3,11 @@
 ## Project: Finding Your Way
 A redesign of Northeastern University's degree audit system for seeing a student's degree progress and exploring other possible degrees. Completed during the Spring 2020 semester.
 
+<<<<<<< HEAD
 ### [Live prototype](https://ericayee.com/hci/)
+=======
+[Live prototype]((https://ericayee.com/hci/)
+>>>>>>> cad03c5fe9ceafaf4b61e54117d9c4b9ddb62e16
 
 
 ### Members
