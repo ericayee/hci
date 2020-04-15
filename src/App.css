@@ -61,41 +61,34 @@
 }
 
 .degree-listing-wrapper {
-  margin: 1em;
+  margin: 0.5em;
 }
 
 .degree-listing-flex {
-  width: 80%;
-  margin-left: 10%;
+  max-width: 800px;
+  margin: 15px auto;
   display: flex;
   flex-wrap: nowrap;
   justify-content: flex-start;
 }
 
+.degree-listing-button {
+  font-size: 1em;
+  padding: 2px;
+  width: 235px;
+}
+
 .degree-listing-name {
   flex-basis: 60%;
-  font-size: 2em;
   font-weight: 400;
+  font-size: 1.5em;
   text-align: left;
-}
-
-.degree-listing-learn {
-  padding: .5em;
-  cursor: pointer;
-}
-
-.degree-listing-view {
-  padding: .5em;
-}
-
-.degree-listing-link {
-  padding: .5em;
 }
 
 .degree-listing-desc {
-  margin-left: 10%;
+  margin: 10px auto;
   text-align: left;
-  width: 70%;
+  max-width: 800px;
 }
 
 .info-icon {
@@ -104,4 +97,28 @@
 
 .arrow-icon {
   width: 10px;
+}
+
+/* explore page styles */
+@media screen and (max-width:480px){
+  .explore-content-wrapper {
+    margin: 10px 20px;
+  }
+
+  .select-menu {
+    width: 335px !important;
+  }
+
+  .degree-listing-name {
+    font-size: 1em;
+    margin-right:10px;
+  }
+
+  .degree-listing-button .explore-btn {
+    margin: 3px;
+    padding: 5px;
+    font-size: .75em;
+  }
+
+
 }

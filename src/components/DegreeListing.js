@@ -18,7 +18,7 @@ class DegreeListing extends Component {
         <div className="degree-listing-flex">
           <div className="degree-listing-name">{this.props.degree}</div>
           <div
-            className="degree-listing-learn"
+            className="degree-listing-button"
             onClick={() => this.setState({
               learnMore: !this.state.learnMore
             })}>
@@ -27,13 +27,15 @@ class DegreeListing extends Component {
               <span><img src={this.state.learnMore ? arrowUp : arrowDown} className="arrow-icon" alt="arrow" /></span>
             </button>
           </div>
-          <div className="degree-listing-link">
-            <button class="explore-btn">
-              <a href={this.props.link} target="_blank" rel="noopener noreferrer">View catalog&nbsp;
-              <span><img src={arrowUpRight} className="arrow-icon" alt="upper right arrow" /></span></a>
-            </button>
+          <div className="degree-listing-button">
+            <a href={this.props.link} target="_blank" rel="noopener noreferrer">
+              <button class="explore-btn">
+                View catalog&nbsp;
+                <span><img src={arrowUpRight} className="arrow-icon" alt="upper right arrow" /></span>
+              </button>
+            </a>
           </div>
-          <div className="degree-listing-view">
+          <div className="degree-listing-button">
             <Link to={{
               pathname: '/degree',
               degreeName: this.props.degree,

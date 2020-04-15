@@ -52,7 +52,7 @@ class Explore extends Component {
 		    </Link>
         <div className="explore-content-wrapper">
           <h2>Explore other degree options</h2>
-          <p class="explore-desc">This tool can be used to check requirements for other degree options if you're thinking about changing your major. Exploring these options generates hypothetical output. Any official change of your degree or catalog year must be done through your academic advisor.</p>
+          <p className="explore-desc">This tool can be used to check requirements for other degree options if you're thinking about changing your major. Exploring these options generates hypothetical output. Any official change of your degree or catalog year must be done through your academic advisor.</p>
           <div className="select-wrapper">
             <h4>Catalog Year
               <span><img data-tip={catalogYearTooltipText} src={info} className="info-icon" alt="info icon" /></span>
